@@ -1,0 +1,168 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.4.1 
+2010-03-01
+Author: Richard Clark - http://richclarkdesign.com
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1.5em;
+}
+
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted #000;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+html{
+  background: #212121;
+  color: #FFF;
+}
+body{
+  font: 20px HelveticaNeue-UltraLight, 'Helvetica Neue', Arial, sans-serif;
+  color: #FFF;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
+  background: #212121;
+}
+@media only screen and (max-device-width:480px) {body{-webkit-text-stroke:0 black;}}
+
+a                  {text-decoration:none; color:white;}
+a:hover            {border-bottom:1px dotted white; text-decoration:none;}
+a img              {border:none;}
+sup,sub            {height: 0; line-height: 1; vertical-align: baseline; _vertical-align: bottom; position: relative;}
+sup                {bottom: 1ex;}
+sub                {top: .5ex;}
+
+header {
+    width:990px;
+    margin:0 auto;
+    text-align:center;
+}
+header h1 {
+    font:32px HelveticaNeue-UltraLight, 'Helvetica Neue', Arial, sans-serif;
+    color:rgba(255,255,255,1);
+}
+
+nav {
+    width:990px;
+    margin:0 auto;
+}
+nav ul {
+    margin-left:270px;
+    margin-top:30px;
+}
+nav li {
+    float:left;
+    padding: 10px;
+}
+
+section h2 {
+    font:24px HelveticaNeue-UltraLight, 'Helvetica Neue', Arial, sans-serif;
+    color:rgba(255,255,255,1);
+}
+
+article {
+    width:990px;
+    margin:0 auto;
+    text-align:center;
+}
+
+article p {
+    text-align:left;
+}
+/* mine*/
+
+#game-space{
+  width: 990px;
+  margin: 20px auto;
+  padding: 100px 0;
+  background: #FFF;
+}
+#indorfun{
+  margin: 0 auto;
+}

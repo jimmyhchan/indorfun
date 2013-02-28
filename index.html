@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>[In]dorfun</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="http://platform.linkedin.com/in.js">
+       api_key: wGqW-QSVrIIHJvEckUuovjZXXEm0aNzVqSEaaP32jaUVK3KXS7zR19smSXpivZyC
+       authorize: true
+    </script>
+    
+  </head>
+
+  <body>
+    <header>
+      <h1>[In]dorfun</h1>
+    </header>
+    
+    <script type="in/Login">
+       Hello, <?js= firstName ?> <?js= lastName ?>.
+    </script>
+    <script type="in/Login">
+    IN.API.Profile("me")
+      .fields(["id", "firstName", "lastName", "pictureUrl","headline"])
+      .result(function(result) {
+        profile = result.values[0];
+        profHTML += "<p><img class=img_border align=\"left\" src=\"" + profile.pictureUrl + "\"></p>";  
+        profHTML += "<h2 class=myname>" + profile.firstName + " " + profile.lastName + "</a> </h2>";
+        profHTML += "<span class=myheadline>" + profile.headline + "</span>";
+        $("#profile").html(profHTML);
+      });
+
+
+      IN.API.Connections("me")
+      .fields(["pictureUrl","publicProfileUrl"])
+      .params({"count":30})
+      .result(function(result) {
+        profHTML = "";
+        for (var index in result.values) {
+            profile = result.values[index]
+            if (profile.pictureUrl) {
+                profHTML += "<p><a href=\"" + profile.publicProfileUrl + "\">";
+                profHTML += "<img class=img_border height=30 align=\"left\" src=\"" + profile.pictureUrl + "\"></a>";   
+            }    
+        }
+        $("#connections").html(profHTML);
+      });
+            
+    </script>
+
+    <section id="game-space">
+      <canvas id="indorfun" tabindex="0" width="800" height="600"> </canvas>
+    </section>
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.1.min.js"><\/script>')</script>
+    <!-- pre3d code https://github.com/deanm/pre3d.git -->
+    <script src="js/libs/pre3d/pre3d.js"></script>
+    <script src="js/libs/pre3d/pre3d_shape_utils.js"></script>
+    <script src="js/libs/pre3d/pre3d_path_utils.js"></script>
+    <script src="js/libs/pre3d/demos/demo_utils.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

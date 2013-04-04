@@ -1,0 +1,3 @@
+[submodule "js/libs/pre3d"]
+	path = js/libs/pre3d
+	url = git://github.com/deanm/pre3d.git
